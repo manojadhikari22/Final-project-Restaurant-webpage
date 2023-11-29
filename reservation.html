@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Final project</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="/"><img src="./assets/logo.svg" alt=""></a>
+        </div>
+        
+        <ul class="navlist">
+          <li><a href="/">Home</a></li>
+          <li><a href="./about.html">About us</a></li>
+          <li><a href="./reservation.html" class="active-menu">Reservation</a></li>
+          <li><a href="./contact.html">Contact us</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fa fa-bars bars"></i> &nbsp;</div>
+      </nav>
+      <ul class="navlist-mobile">
+        <li><a href="/" class="active-menu">Home</a></li>
+        <li><a href="./about.html">About us</a></li>
+        <li><a href="./reservation.html">Reservation</a></li>
+        <li><a href="./contact.html">Contact us</a></li>
+        <li><a href="./menu.html">Menu</a></li>
+      </ul>
+    </header>
+
+    <main>
+       <section class="reservation">
+        <div class="reservation-header-img">
+            <img src="./assets/reserve.jpg" alt="Table for reservation">
+            <h2 class="reservation-title">Reservation </h2>
+        </div>
+        <div class="reservation-wrap">
+            <div class="info-reservation">
+                <h2>Info</h2>
+                <p>For group reservations (over 10 people), we offer long tables for up to 11 guests. For larger groups, we arrange seating in adjacent rows. </p>
+                <p> Choose from three preset, varied sharing menus, selected by our chefs. The entire group must select the same menu, but we can accommodate preferences and allergies if informed at least 2 days before your visit.</p>
+                <p>Your booking is confirmed once you receive an SMS/email from us. Ensure to check the box indicating you've read and accepted the reservation terms before clicking the "complete booking" button. Contact us if you don't receive a confirmation.</p>
+            </div>
+            <form class="reservation-form">
+                <label for="name">Full Name:</label><br>
+                <input type="text" class="form-control" id="name" name="name" ><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" class="form-control" id="email" name="email" ><br>
+                
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" class="form-control" name="phone" ><br>
+                
+                <label for="date">Date:</label><br>
+                <input type="date" id="date" class="form-control" name="date" ><br>
+                
+                <label for="time">Time:</label><br>
+                <input type="time" id="time" class="form-control" name="time" ><br>
+                
+                <label for="guests">Number of Guests:</label><br>
+                <input type="number" id="guests" class="form-control" name="guests" min="1" ><br>
+                
+                <label for="requests">Special Requests:</label><br>
+                <textarea id="requests" name="requests" class="text-long"></textarea><br>
+                
+                <input  type="submit" value="Submit Reservation">
+              </form>
+          </div>
+          <div">
+            <p class="errorMsg"></p>
+            <p class="successMsg"></p>
+            <div class="datas"></div>
+          </div>
+       </section>
+    </main>
+    <footer>
+        <div class="footer-wrap">
+            <div class="box"><a href=""><img class="footer-logo" src="./assets/logo.svg" alt="" /></div>
+            <div class="box">
+                <h2>Address</h2>
+                <ul class="footer-address">
+                  <li>Food Administrasjon
+                    Magasinparken 30</li>
+                  <li>Postboks 0000 Ski</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Menu</h2>
+                <ul class="footer-menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Social links</h2>
+                <ul class="footer-social-links">
+                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                    <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <section class="footer-auth-info">
+            <div><span> &copy; Nepali Food Norway.
+                All rights reserved 2023. </span></div>
+            <div>  Design and Maintained by: Manoj Adhikari.</div>
+           
+        </section>
+    </footer>
+    <script src="/js/reservation.js"></script>
+  </body>
+</html>

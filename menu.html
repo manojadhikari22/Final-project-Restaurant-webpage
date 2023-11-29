@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Food items</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="/"><img src="./assets/logo.svg" alt="logo" /></a>
+        </div>
+
+        <ul class="navlist">
+          <li><a href="/">Home</a></li>
+          <li><a href="./about.html">About us</a></li>
+          <li><a href="./menu.html" class="active-menu">Menu</a></li>
+          <li><a href="./reservation.html">Reservation</a></li>
+          <li><a href="./contact.html">Contact us</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fa fa-bars bars"></i> &nbsp;</div>
+      </nav>
+      <ul class="navlist-mobile">
+        <li><a href="/">Home</a></li>
+        <li><a href="./about.html">About us</a></li>
+        <li><a href="./menu.html">Menu</a></li>
+        <li><a href="./reservation.html">Reservation</a></li>
+        <li><a href="./contact.html">Contact us</a></li>
+      </ul>
+    </header>
+    <main>
+        <section class="fooditems-content">
+         <div class="fooditems-content-header-img">
+             <img src="./assets/fooditems-header.jpg" alt="">
+             <h2 class="fooditems-title">Nepali food items </h2>
+         </div>
+       </section>
+       <h2 class="menu-list">**MENU**</h2>
+       <section class="food-items">
+        <button class="btn-filter active" onclick="filter('all')">All</button>
+        <button class="btn-filter" onclick="filter('veg')">Veg</button>
+        <button class="btn-filter" onclick="filter('non-veg')">Non-Veg</button>
+        <button class="btn-filter" onclick="sortPrice()">Sort by Price</button>
+        <div id="foodContainer" class="grid-container"></div>
+      </section>
+ 
+     </main>
+
+    <footer>
+        <div class="footer-wrap">
+            <div class="box"><a href=""><img class="footer-logo" src="./assets/logo.svg" alt="" /></div>
+            <div class="box">
+                <h2>Address</h2>
+                <ul class="footer-address">
+                  <li>Food Administrasjon
+                    Magasinparken 30</li>
+                  <li>Postboks 1234 Ski</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Menu</h2>
+                <ul class="footer-menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Social links</h2>
+                <ul class="footer-social-links">
+                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                    <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <section class="footer-auth-info">
+            <div><span> &copy; Nepali Food Norway.
+                All rights reserved 2023. </span></div>
+            <div>  Design and Maintained by: Manoj Adhikari.</div>
+           
+        </section>
+    </footer>
+   
+    <script src="./js/filter.js"></script>
+  </body>
+</html>

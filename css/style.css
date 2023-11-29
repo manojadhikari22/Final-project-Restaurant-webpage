@@ -1,0 +1,398 @@
+@import "reset.css";
+@import "variable.css";
+@import "reservation.css";
+@import "about.css";
+@import "contact.css";
+@import "filter.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;1,100;1,200;1,300;1,400&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+/** header css */
+header {
+  width: 100vw;
+  height: auto;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  z-index: 50;
+}
+
+header nav {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--spacing-small);
+}
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle .bars {
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-weight: 400;
+  font-size: var(--font-size-small);
+}
+.navlist-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navlist-mobile {
+    display: none !important;
+  }
+}
+.show {
+  display: block;
+}
+
+header nav .logo a {
+  color: var(--secondary-color);
+}
+header nav .navlist {
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav .navlist li {
+  padding: 0 var(--primary-padding);
+}
+header nav .navlist li a {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+header nav .navlist li .active-menu {
+  color: var(--ternary);
+}
+header nav .navlist li a:hover {
+  color: var(--ternary);
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .navlist {
+    display: none !important;
+  }
+
+  .navlist-mobile {
+    content: "";
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    position: absolute;
+    top: 80%;
+    z-index: 51;
+  }
+  .navlist-mobile li a {
+    color: var(--secondary-color);
+    text-align: center;
+    display: block;
+    padding: var(--spacing-small) 0;
+  }
+
+  header nav .menu-toggle {
+    display: block;
+  }
+
+  /* Adjust other elements as needed for mobile */
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100vw;
+  position: relative;
+  margin: auto;
+  height: 90vh;
+}
+.slideshow-container .mySlides img {
+  height: 90vh;
+  object-fit: cover;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: var(--primary-padding);
+  margin-top: -32px;
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: var(--font-size-medium);
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 10;
+}
+.next {
+  margin-right: var(--primary-margin);
+}
+
+.mySlides::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: var(--ternary);
+}
+
+/* Caption text */
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+.slide-text h2 {
+  font-size: var(--font-size-h2);
+  color: var(--secondary-color);
+}
+.slide-text p {
+  line-height: 1.5;
+  color: var(--secondary-color);
+  max-width: 400px;
+  margin: 0 auto;
+}
+.slide-text .btn-primary {
+  background-color: var(--ternary);
+  color: var(--secondary-color);
+  padding: var(--spacing-base) var(--spacing-medium-large);
+  border-radius: var(--spacing-base);
+  transition: all 0.3s ease-in-out;
+  margin: var(--primary-margin) 0;
+  display: inline-block;
+}
+.slide-text .btn-primary:hover {
+  background-color: var(--secondary-color);
+  color: var(--ternary);
+  transition: all 0.3s ease-in-out;
+}
+/* The dots/bullets/indicators */
+.dot-container {
+  position: absolute;
+  margin-top: -10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: var(--ternary);
+  padding: 4px;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+.info-restaurant .info-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-small);
+}
+.info-restaurant .info-wrap h3 {
+  font-size: var(--font-size-h3);
+  color: var(--ternary);
+  font-weight: 300;
+  text-align: center;
+}
+.info-restaurant .info-wrap h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 500;
+  text-align: center;
+  margin: var(--primary-margin) 0;
+}
+.info-restaurant .info-wrap p {
+  line-height: 1.5;
+  font-weight: 300;
+  text-align: center;
+}
+.info-restaurant .btn-secondary {
+  display: block;
+  margin: var(--primary-margin) 0;
+  color: var(--primary-color);
+  text-align: center;
+  position: relative;
+}
+.info-restaurant .btn-secondary::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  width: 20%;
+  height: 2px;
+  background-color: var(--ternary);
+  transition: all 0.3s ease-in-out;
+}
+.info-grid-items {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: var(--primary-padding);
+}
+.info-grid-items .food-items {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+.info-grid-items .food-items .desc {
+  padding: 5px;
+}
+.info-grid-items .food-items .desc h3 {
+  margin-bottom: 6px;
+}
+.food-items-img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  max-height: 220px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .info-grid-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.bio-info-wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: var(--primary-margin);
+  margin-bottom: var(--spacing-large);
+  justify-content: center;
+}
+.bio-info-text {
+  background-color: var(--background-color);
+  padding: var(--primary-padding);
+  padding-top: var(--spacing-large);
+}
+.bio-info-text p {
+  line-height: 1.8;
+  font-weight: 300;
+  font-size: var(--font-size-vsmall);
+}
+@media (max-width: 768px) {
+  .bio-info-wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/** Footer section */
+footer {
+  width: 100vw;
+  height: auto;
+  background-color: var(--primary-color);
+  padding: var(--primary-padding);
+}
+.footer-wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-content: center;
+  text-align: start;
+}
+@media (max-width: 768px) {
+  .footer-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+.footer-wrap .box h2 {
+  color: var(--secondary-color);
+  font-size: var(--font-size-h4);
+  margin-bottom: var(--primary-margin);
+}
+.footer-wrap .box {
+  color: var(--secondary-color);
+}
+.footer-wrap .box .footer-logo {
+  width: 150px;
+}
+.footer-wrap .box .footer-menu {
+  display: block;
+}
+.footer-wrap .box .footer-menu li a {
+  color: var(--secondary-color);
+}
+
+.footer-wrap .box .footer-social-links li a {
+  color: var(--secondary-color);
+}
+
+.footer-auth-info {
+  max-width: 1140px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border-color-white);
+  color: var(--secondary-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: var(--primary-margin);
+  padding-top: var(--primary-padding);
+}
+@media (max-width: 768px) {
+  .footer-auth-info {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

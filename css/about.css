@@ -1,0 +1,108 @@
+.about-content {
+  min-height: 300px;
+}
+.about-content-header-img {
+  max-height: 300px;
+  position: relative;
+}
+.about-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--secondary-color);
+  font-size: var(--font-size-large);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing-base);
+  text-shadow: 0 0 5px var(--ternary);
+}
+@media (max-width: 768px) {
+  .about-title {
+    font-size: var(--font-size-small);
+  }
+}
+.about-content-header-img img {
+  max-height: 300px;
+  object-fit: cover;
+}
+.about-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-large) var(--spacing-small);
+}
+
+.about-wrap h3 {
+  font-size: var(--font-size-h3);
+  color: var(--ternary);
+  font-weight: 300;
+  text-align: center;
+}
+.about-wrap h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 500;
+  text-align: center;
+  margin: var(--primary-margin) 0;
+}
+.about-wrap p {
+  line-height: 1.5;
+  font-weight: 300;
+  text-align: center;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .about-wrap {
+    grid-template-columns: repeat(1, 1fr);
+    padding: var(--font-size-base);
+  }
+}
+.about-info-wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: var(--primary-padding);
+}
+@media (max-width: 768px) {
+  .about-info-wrap {
+    grid-template-columns: repeat(1, 1fr);
+    padding: var(--primary-padding);
+  }
+}
+.about-info-text p {
+  line-height: 1.5;
+  font-weight: 300;
+  text-align: left;
+  font-size: var(--font-size-base);
+}
+.about-info-text h3 {
+  margin: var(--spacing-small) 0;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: var(--primary-padding);
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: var(--font-size-base);
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 var(--primary-padding);
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+.panel .p-info {
+  font-size: var(--font-size-vvsmall);
+}
