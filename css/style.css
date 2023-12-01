@@ -103,7 +103,7 @@ header nav .navlist li a:hover {
     display: block;
   }
 
-  /* Adjust other elements as needed for mobile */
+  /* Adjusting elements as needed for mobile */
 }
 
 /* Slideshow container */
@@ -155,7 +155,7 @@ header nav .navlist li a:hover {
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a color with a little bit see-through */
+/* On hover, adding a color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: var(--ternary);
@@ -253,6 +253,7 @@ header nav .navlist li a:hover {
   color: var(--ternary);
   font-weight: 300;
   text-align: center;
+  margin-top: var(--primary-margin);
 }
 .info-restaurant .info-wrap h2 {
   font-size: var(--font-size-h2);

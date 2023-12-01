@@ -1,3 +1,4 @@
+//initializing all inputs food items as an array of object
 const foodItems = [
   {
     name: "Chowmin",
@@ -55,11 +56,13 @@ const foodItems = [
     image: "./assets/piro Aaloo.jpg",
   },
 ];
+// This function takes an array of food items (items) as a parameter.
 function displayItems(items) {
   const container = document.getElementById("foodContainer");
-  container.innerHTML = "";
+  container.innerHTML = "";// clears the container existing content
+  //It loops through each item in the provided array and dynamically creates HTML elements to display the food items.
   items.forEach(function (item) {
-    const div = document.createElement("div");
+    const div = document.createElement("div");//div elements
     div.className = "grid-item";
     div.innerHTML =
       '<img src="' +
@@ -73,10 +76,11 @@ function displayItems(items) {
       "<br>" +
       "Category: " +
       item.category;
-    container.appendChild(div);
+    container.appendChild(div);//Appends this div to the "foodContainer".
   });
 }
 
+// This finction is called when a filter button is clicked
 function filter(category) {
   let buttons = document.getElementsByClassName("btn-filter");
   for (let i = 0; i < buttons.length; i++) {

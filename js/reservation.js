@@ -26,7 +26,7 @@ if (!isValid) {
     let errorMsg = document.querySelector('.errorMsg');
     errorMsg.textContent = 'Please add all input values*';
     errorMsg.style.display = "block"
-    // Hide error message after 3 seconds
+    // Hide error message after 5 seconds
     setTimeout(() => {
       errorMsg.textContent = '';
   }, 5000);
