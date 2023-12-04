@@ -1,15 +1,6 @@
 // code for FAQ
-document.addEventListener("DOMContentLoaded", function () {
-document.querySelector(".menu-toggle").addEventListener("click", function () {
-document.querySelector(".navlist-mobile").classList.toggle("show");
-console.log("click");
-  });
-});
-
 function accordion() {
   const acc = document.getElementsByClassName("accordion");
-  
-
   for (let i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
       // Close all other accordions
@@ -32,3 +23,4 @@ function accordion() {
   }
 }
 accordion();
+

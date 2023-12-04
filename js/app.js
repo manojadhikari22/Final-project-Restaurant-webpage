@@ -12,7 +12,7 @@ function currentSlide(n) {
 //thi function is rersponsible for displaying the slides and dots
 //according to the provided inde'n'
 function showSlides(n) {
-  const slides = Array.from(document.getElementsByClassName("mySlides"));
+  const slides = Array.from(document.getElementsByClassName("slides"));
   const dots = Array.from(document.getElementsByClassName("dot"));
 
   if (n > slides.length) {

@@ -38,3 +38,11 @@
   max-width: 600px;
   padding: 0 var(--spacing-large);
 }
+@media(max-width:768px){
+  .contact-wrap {
+    display: block;
+  }
+  .contact-address{
+    margin-bottom:1rem;
+  }
+}

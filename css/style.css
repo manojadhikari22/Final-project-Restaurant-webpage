@@ -3,7 +3,7 @@
 @import "reservation.css";
 @import "about.css";
 @import "contact.css";
-@import "filter.css";
+@import "menu.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;1,100;1,200;1,300;1,400&display=swap");
 body {
@@ -113,7 +113,7 @@ header nav .navlist li a:hover {
   margin: auto;
   height: 90vh;
 }
-.slideshow-container .mySlides img {
+.slideshow-container .slides img {
   height: 90vh;
   object-fit: cover;
 }
@@ -139,7 +139,7 @@ header nav .navlist li a:hover {
   margin-right: var(--primary-margin);
 }
 
-.mySlides::after {
+.slides::after {
   content: "";
   position: absolute;
   top: 0;
@@ -291,11 +291,13 @@ header nav .navlist li a:hover {
   gap: 1rem;
   padding: var(--primary-padding);
 }
-.info-grid-items .food-items {
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-}
+
 .info-grid-items .food-items .desc {
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   padding: 5px;
 }
 .info-grid-items .food-items .desc h3 {
@@ -306,10 +308,16 @@ header nav .navlist li a:hover {
   border-top-right-radius: 8px;
   max-height: 220px;
   object-fit: cover;
+  border: 1px solid var(--border-color);
 }
 @media (max-width: 768px) {
   .info-grid-items {
-    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+   display: block;
+  }
+  .food-items img {
+    width: 100%;
+    max-height: auto;
   }
 }
 

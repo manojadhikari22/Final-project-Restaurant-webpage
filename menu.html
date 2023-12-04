@@ -20,8 +20,8 @@
         <ul class="navlist">
           <li><a href="/">Home</a></li>
           <li><a href="./about.html">About us</a></li>
-          <li><a href="./menu.html" class="active-menu">Menu</a></li>
           <li><a href="./reservation.html">Reservation</a></li>
+          <li><a href="./menu.html" class="active-menu">Menu</a></li>
           <li><a href="./contact.html">Contact us</a></li>
         </ul>
         <div class="menu-toggle"><i class="fa fa-bars bars"></i> &nbsp;</div>
@@ -29,19 +29,19 @@
       <ul class="navlist-mobile">
         <li><a href="/">Home</a></li>
         <li><a href="./about.html">About us</a></li>
-        <li><a href="./menu.html">Menu</a></li>
         <li><a href="./reservation.html">Reservation</a></li>
+        <li><a href="./menu.html">Menu</a></li>
         <li><a href="./contact.html">Contact us</a></li>
       </ul>
     </header>
     <main><!--body section-->
         <section class="fooditems-content">
          <div class="fooditems-content-header-img">
-             <img src="./assets/fooditems-header.jpg" alt="">
+             <img src="./assets/fooditems-header.jpg" alt="hero image">
              <h2 class="fooditems-title">Nepali food items </h2>
          </div>
        </section>
-       <h2 class="menu-list">**MENU**</h2>
+       <h2 class="menu-title">MENU</h2>
        <section class="food-items"><!--filter method is using to to sort the price, veg food and non-veg food from the menu-->
         <button class="btn-filter active" onclick="filter('all')">All</button>
         <button class="btn-filter" onclick="filter('veg')">Veg</button>
@@ -54,7 +54,7 @@
 
     <footer><!--footer section-->
         <div class="footer-wrap">
-            <div class="box"><a href=""><img class="footer-logo" src="./assets/logo.svg" alt="" /></div>
+            <div class="box"><a href=""><img class="footer-logo" src="./assets/logo.svg" alt="footer logo" /></div>
             <div class="box">
                 <h2>Address</h2>
                 <ul class="footer-address">
@@ -91,5 +91,6 @@
     </footer>
    
     <script src="./js/filter.js"></script>
+    <script src="./js/navbar.js"></script>
   </body>
 </html>
